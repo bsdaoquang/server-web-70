@@ -1,0 +1,17 @@
+GET http://localhost:3000/
+
+
+###
+GET http://localhost:3000/profile/1/mindX
+
+###
+GET http://localhost:3000/product?id=24&name="MindX"
+
+###
+POST http://localhost:3000/auth/login 
+Content-Type: "application/json"
+
+  {
+    "email": "123@gmail.com",
+    "password": "1234567"
+  }
