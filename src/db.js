@@ -22,7 +22,7 @@ const connectToDB = async(app) => {
     db.restaurants = database.collection('restaurants')
     db.comments = database.collection('comments')
 
-    app.listen(process.env.PORT, (err) => {
+    app.listen(process.env.PORT || 3001, (err) => {
       if (err) {
         console.log(`can not start server by ${err}`)
       }
