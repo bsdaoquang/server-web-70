@@ -1,14 +1,14 @@
 /** @format */
 const express = require('express');
 const cors = require('cors');
-const authRouter = require('./router/authRouter');
-const postRouter = require('./router/postRouter');
-const {connectToDB} = require('./db');
-const restaurantRouter = require('./router/restaurantsRouter');
+const authRouter = require('./src/router/authRouter');
+const postRouter = require('./src/router/postRouter');
+const {connectToDB} = require('./src/db');
+const restaurantRouter = require('./src/router/restaurantsRouter');
 require('dotenv').config();
 
 const app = express();
-
+app.use(express.static('public'))
 app.use(cors());
 app.use(express.json());
 
